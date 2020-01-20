@@ -21,4 +21,22 @@ describe("FizzBuzz", function() {
       expect(fizzBuzz.isDivisibleBy5(6)).toBe(false);
     });
   });
+
+  describe('print the number, Fizz, Buzz or FizzBuzz if', function() {
+    it('is divisible by 3 and 5', function() {
+      expect(fizzBuzz.printFizzBuzz(15)).toMatch('FizzBuzz')
+    });
+
+    it('if divisible by 3', function() {
+      expect(fizzBuzz.printFizzBuzz(3)).toMatch('Fizz');
+    });
+
+    it('if divisible by 5', function() {
+      expect(fizzBuzz.printFizzBuzz(5)).toMatch('Buzz');
+    });
+
+    it('is not divisible by any', function() {
+      expect(fizzBuzz.printFizzBuzz(2)).toMatch('2');
+    });
+  });
 });
